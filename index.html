@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Finder ChessClub</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <section id="recipe-section">
+      <h2 class="section-heading">ChessClub Recipe Finder</h2>
+      <h3 class="sub-heading">The favorite food globetrotters App !</h3>
+      <label for="recipe-input-field" id="search-prompt">Pick the cuisine type you fancy:</label>
+      <div id="select-section">
+        <select id="recipe-input-field" name="recipe-input-field">
+          <option value="American">American</option>
+          <option value="Asian">Asian</option>
+          <option value="British">British</option>
+          <option value="Caribbean">Caribbean</option>
+          <option value="Central Europe">Central Europe</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Eastern Europe">Eastern Europe</option>
+          <option value="French">French</option>
+          <option value="Indian">Indian</option>
+          <option value="Italian">Italian</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Kosher">Kosher</option>
+          <option value="Mediterranean">Mediterranean</option>
+          <option value="Mexican">Mexican</option>
+          <option value="Middle Eastern">Middle Eastern</option>
+          <option value="Nordic">Nordic</option>
+          <option value="South American">South American</option>
+          <option value="South East Asian">South East Asian</option>
+        </select>
+        <button id="recipe-button">Search</button>
+      </div>
+    </section>
+    <div id="recipes-render-box"></div>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100&family=Yesteryear&display=swap');
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root{
+ --primarycolor: #fffecb;
+ --secondarycolor: #5448c8;
+ --buttoncolor: #ff2e00;
+ --buttonsecondarycolor: #FEA82F;
+ --textcolor: #423E3B;
+}
+
+body{
+  background-color: var(--primarycolor);
+  color: var(--textcolor);
+}
+
+.section-heading{
+background-color: var(--secondarycolor) ;
+width: 100%;
+text-align: center;
+color: var(--primarycolor);
+font-size: 3rem;
+padding: 1rem;
+}
+
+.sub-heading{
+  font-size: 2rem;
+  padding:1rem;
+}
+
+#search-prompt{
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+#recipe-input-field{
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+#recipe-button{
+  font-size: 1rem;
+  background-color: var(--buttoncolor);
+  color: var(--primarycolor);
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#recipe-button:hover {
+  background-color: red;
+  color: var(--primarycolor);
+}
+
+#recipes-render-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  max-width: 90%;
+  margin: 2rem auto;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 1rem;
+}
+
+.background-Modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 40%;
+  min-height: 300px;
+  background-color: var(--primarycolor);
+  border-radius: 1rem;
+  max-height: 90vh;
+  overflow-y: scroll;
+}
+
+.modal::-webkit-scrollbar {
+  width: 0px;
+}
+
+.modal-header {
+  background-color: var(--secondarycolor);
+  color: var(--primarycolor);
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.modal-meal-type {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.ingredients-list {
+  padding: 0.5rem;
+}
+
+.ingredients-list li {
+  margin: 0 1rem;
+}
+
+.ingredients-list h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ingredients-list li {
+  font-weight: normal;
+  padding-top: 5px;
+}
+
+.modal-button{
+  font-size: 1rem;
+  background-color: var(--buttoncolor);
+  color: var(--primarycolor);
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem;
+  margin: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modal-button:hover {
+  background-color: red;
+}
+
+#modal-recipe-button {
+  background-color: green
+}
+
+#modal-recipe-button:hover {
+  background-color:	darkgreen
+}
+
+#recipe-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.recipe-card {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.recipe-card:hover {
+  animation: card-animation 0.4s forwards;
+}
+
+@keyframes card-animation {
+  100% {
+    transform: scale(1.1)
+  }
+}
+
+#modal-button-div {
+  display: flex;
+}
